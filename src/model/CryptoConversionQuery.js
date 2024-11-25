@@ -38,6 +38,8 @@ class CryptoConversionQuery {
     static initialize(obj, from, to) { 
         obj['from'] = from;
         obj['to'] = to;
+        obj['amount'] = 10;
+        obj['precision'] = 8;
     }
 
     /**
