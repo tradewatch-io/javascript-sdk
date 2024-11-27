@@ -5,6 +5,7 @@ All URIs are relative to *https://api.tradewatch.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convert**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion
+[**cryptoGetExchanges**](CryptoApi.md#cryptoGetExchanges) | **GET** /crypto/exchanges | Available Exchanges
 [**getQuote**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote
 [**getSymbols**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols
 
@@ -57,6 +58,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CryptoConversion**](CryptoConversion.md)
+
+### Authorization
+
+[api_key_query](../README.md#api_key_query), [api_key_header](../README.md#api_key_header)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## cryptoGetExchanges
+
+> CryptoExchangesList cryptoGetExchanges()
+
+Available Exchanges
+
+Get list of available cryptocurrency exchanges
+
+### Example
+
+```javascript
+import Tradewatch from 'tradewatch';
+let defaultClient = Tradewatch.ApiClient.instance;
+// Configure API key authorization: api_key_query
+let api_key_query = defaultClient.authentications['api_key_query'];
+api_key_query.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key_query.apiKeyPrefix = 'Token';
+// Configure API key authorization: api_key_header
+let api_key_header = defaultClient.authentications['api_key_header'];
+api_key_header.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key_header.apiKeyPrefix = 'Token';
+
+let apiInstance = new Tradewatch.CryptoApi();
+apiInstance.cryptoGetExchanges((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CryptoExchangesList**](CryptoExchangesList.md)
 
 ### Authorization
 

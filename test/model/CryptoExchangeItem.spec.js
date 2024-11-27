@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Tradewatch.CryptoApi();
+    instance = new Tradewatch.CryptoExchangeItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,47 +47,31 @@
       object[property] = value;
   }
 
-  describe('CryptoApi', function() {
-    describe('convert', function() {
-      it('should call convert successfully', function(done) {
-        //uncomment below and update the code to test convert
-        //instance.convert(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('CryptoExchangeItem', function() {
+    it('should create an instance of CryptoExchangeItem', function() {
+      // uncomment below and update the code to test CryptoExchangeItem
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be.a(Tradewatch.CryptoExchangeItem);
     });
-    describe('cryptoGetExchanges', function() {
-      it('should call cryptoGetExchanges successfully', function(done) {
-        //uncomment below and update the code to test cryptoGetExchanges
-        //instance.cryptoGetExchanges(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be();
     });
-    describe('getQuote', function() {
-      it('should call getQuote successfully', function(done) {
-        //uncomment below and update the code to test getQuote
-        //instance.getQuote(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be();
     });
-    describe('getSymbols', function() {
-      it('should call getSymbols successfully', function(done) {
-        //uncomment below and update the code to test getSymbols
-        //instance.getSymbols(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property yearEstablished (base name: "year_established")', function() {
+      // uncomment below and update the code to test the property yearEstablished
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

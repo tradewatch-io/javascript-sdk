@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CryptoConversion from '../model/CryptoConversion';
+import CryptoExchangesList from '../model/CryptoExchangesList';
 import CursorPageTCustomizedSymbolsOutFull from '../model/CursorPageTCustomizedSymbolsOutFull';
 import HTTPValidationError from '../model/HTTPValidationError';
 import LastQuote from '../model/LastQuote';
@@ -82,6 +83,43 @@ export default class CryptoApi {
       let returnType = CryptoConversion;
       return this.apiClient.callApi(
         '/crypto/convert/{from}/{to}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cryptoGetExchanges operation.
+     * @callback module:api/CryptoApi~cryptoGetExchangesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CryptoExchangesList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Available Exchanges
+     * Get list of available cryptocurrency exchanges
+     * @param {module:api/CryptoApi~cryptoGetExchangesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CryptoExchangesList}
+     */
+    cryptoGetExchanges(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['api_key_query', 'api_key_header'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CryptoExchangesList;
+      return this.apiClient.callApi(
+        '/crypto/exchanges', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

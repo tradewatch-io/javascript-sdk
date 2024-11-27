@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *Tradewatch.CommoditiesApi* | [**getSymbols**](docs/CommoditiesApi.md#getSymbols) | **GET** /commodities/symbols | Available Symbols
 *Tradewatch.CommoditiesApi* | [**getTypes**](docs/CommoditiesApi.md#getTypes) | **GET** /commodities/types | Available Types
 *Tradewatch.CryptoApi* | [**convert**](docs/CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion
+*Tradewatch.CryptoApi* | [**cryptoGetExchanges**](docs/CryptoApi.md#cryptoGetExchanges) | **GET** /crypto/exchanges | Available Exchanges
 *Tradewatch.CryptoApi* | [**getQuote**](docs/CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote
 *Tradewatch.CryptoApi* | [**getSymbols**](docs/CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols
 *Tradewatch.CurrenciesApi* | [**convert**](docs/CurrenciesApi.md#convert) | **GET** /currencies/convert/{from}/{to} | Conversion
@@ -179,6 +180,8 @@ Class | Method | HTTP request | Description
  - [Tradewatch.CountryObj](docs/CountryObj.md)
  - [Tradewatch.CryptoConversion](docs/CryptoConversion.md)
  - [Tradewatch.CryptoConversionQuery](docs/CryptoConversionQuery.md)
+ - [Tradewatch.CryptoExchangeItem](docs/CryptoExchangeItem.md)
+ - [Tradewatch.CryptoExchangesList](docs/CryptoExchangesList.md)
  - [Tradewatch.CursorPageTCustomizedSymbolsOutFull](docs/CursorPageTCustomizedSymbolsOutFull.md)
  - [Tradewatch.ErrorDetails](docs/ErrorDetails.md)
  - [Tradewatch.ErrorResponseBody](docs/ErrorResponseBody.md)

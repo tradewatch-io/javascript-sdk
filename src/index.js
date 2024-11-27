@@ -27,6 +27,8 @@ import Country from './model/Country';
 import CountryObj from './model/CountryObj';
 import CryptoConversion from './model/CryptoConversion';
 import CryptoConversionQuery from './model/CryptoConversionQuery';
+import CryptoExchangeItem from './model/CryptoExchangeItem';
+import CryptoExchangesList from './model/CryptoExchangesList';
 import CursorPageTCustomizedSymbolsOutFull from './model/CursorPageTCustomizedSymbolsOutFull';
 import ErrorDetails from './model/ErrorDetails';
 import ErrorResponseBody from './model/ErrorResponseBody';
@@ -165,6 +167,18 @@ export {
      * @property {module:model/CryptoConversionQuery}
      */
     CryptoConversionQuery,
+
+    /**
+     * The CryptoExchangeItem model constructor.
+     * @property {module:model/CryptoExchangeItem}
+     */
+    CryptoExchangeItem,
+
+    /**
+     * The CryptoExchangesList model constructor.
+     * @property {module:model/CryptoExchangesList}
+     */
+    CryptoExchangesList,
 
     /**
      * The CursorPageTCustomizedSymbolsOutFull model constructor.
