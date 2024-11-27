@@ -58,10 +58,10 @@
         done();
       });
     });
-    describe('cryptoGetExchanges', function() {
-      it('should call cryptoGetExchanges successfully', function(done) {
-        //uncomment below and update the code to test cryptoGetExchanges
-        //instance.cryptoGetExchanges(function(error) {
+    describe('getExchanges', function() {
+      it('should call getExchanges successfully', function(done) {
+        //uncomment below and update the code to test getExchanges
+        //instance.getExchanges(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

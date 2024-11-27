@@ -26,10 +26,12 @@ class CryptoExchangeItem {
      * @param id {String} Exchange identifier
      * @param name {String} Exchange name
      * @param yearEstablished {Number} Exchange established year
+     * @param country {String} Exchange country
+     * @param website {String} Exchange website URL
      */
-    constructor(id, name, yearEstablished) { 
+    constructor(id, name, yearEstablished, country, website) { 
         
-        CryptoExchangeItem.initialize(this, id, name, yearEstablished);
+        CryptoExchangeItem.initialize(this, id, name, yearEstablished, country, website);
     }
 
     /**
@@ -37,10 +39,12 @@ class CryptoExchangeItem {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, yearEstablished) { 
+    static initialize(obj, id, name, yearEstablished, country, website) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['year_established'] = yearEstablished;
+        obj['country'] = country;
+        obj['website'] = website;
     }
 
     /**
@@ -62,6 +66,12 @@ class CryptoExchangeItem {
             }
             if (data.hasOwnProperty('year_established')) {
                 obj['year_established'] = ApiClient.convertToType(data['year_established'], 'Number');
+            }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = ApiClient.convertToType(data['country'], 'String');
+            }
+            if (data.hasOwnProperty('website')) {
+                obj['website'] = ApiClient.convertToType(data['website'], 'String');
             }
         }
         return obj;
@@ -87,6 +97,14 @@ class CryptoExchangeItem {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
+        // ensure the json data is a string
+        if (data['country'] && !(typeof data['country'] === 'string' || data['country'] instanceof String)) {
+            throw new Error("Expected the field `country` to be a primitive type in the JSON string but got " + data['country']);
+        }
+        // ensure the json data is a string
+        if (data['website'] && !(typeof data['website'] === 'string' || data['website'] instanceof String)) {
+            throw new Error("Expected the field `website` to be a primitive type in the JSON string but got " + data['website']);
+        }
 
         return true;
     }
@@ -94,7 +112,7 @@ class CryptoExchangeItem {
 
 }
 
-CryptoExchangeItem.RequiredProperties = ["id", "name", "year_established"];
+CryptoExchangeItem.RequiredProperties = ["id", "name", "year_established", "country", "website"];
 
 /**
  * Exchange identifier
@@ -113,6 +131,18 @@ CryptoExchangeItem.prototype['name'] = undefined;
  * @member {Number} year_established
  */
 CryptoExchangeItem.prototype['year_established'] = undefined;
+
+/**
+ * Exchange country
+ * @member {String} country
+ */
+CryptoExchangeItem.prototype['country'] = undefined;
+
+/**
+ * Exchange website URL
+ * @member {String} website
+ */
+CryptoExchangeItem.prototype['website'] = undefined;
 
 
 
