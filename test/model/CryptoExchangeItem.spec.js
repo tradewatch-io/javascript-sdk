@@ -72,6 +72,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property country (base name: "country")', function() {
+      // uncomment below and update the code to test the property country
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property website (base name: "website")', function() {
+      // uncomment below and update the code to test the property website
+      //var instance = new Tradewatch.CryptoExchangeItem();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -89,8 +89,8 @@ export default class CryptoApi {
     }
 
     /**
-     * Callback function to receive the result of the cryptoGetExchanges operation.
-     * @callback module:api/CryptoApi~cryptoGetExchangesCallback
+     * Callback function to receive the result of the getExchanges operation.
+     * @callback module:api/CryptoApi~getExchangesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/CryptoExchangesList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -99,10 +99,10 @@ export default class CryptoApi {
     /**
      * Available Exchanges
      * Get list of available cryptocurrency exchanges
-     * @param {module:api/CryptoApi~cryptoGetExchangesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CryptoApi~getExchangesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CryptoExchangesList}
      */
-    cryptoGetExchanges(callback) {
+    getExchanges(callback) {
       let postBody = null;
 
       let pathParams = {

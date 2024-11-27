@@ -5,7 +5,7 @@ All URIs are relative to *https://api.tradewatch.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convert**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion
-[**cryptoGetExchanges**](CryptoApi.md#cryptoGetExchanges) | **GET** /crypto/exchanges | Available Exchanges
+[**getExchanges**](CryptoApi.md#getExchanges) | **GET** /crypto/exchanges | Available Exchanges
 [**getQuote**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote
 [**getSymbols**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols
 
@@ -69,9 +69,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## cryptoGetExchanges
+## getExchanges
 
-> CryptoExchangesList cryptoGetExchanges()
+> CryptoExchangesList getExchanges()
 
 Available Exchanges
 
@@ -94,7 +94,7 @@ api_key_header.apiKey = 'YOUR API KEY';
 //api_key_header.apiKeyPrefix = 'Token';
 
 let apiInstance = new Tradewatch.CryptoApi();
-apiInstance.cryptoGetExchanges((error, data, response) => {
+apiInstance.getExchanges((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
